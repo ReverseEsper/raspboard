@@ -24,9 +24,14 @@ button_map = (
 # Sleep so HID has time to set up keyboard
 time.sleep(3)
 
+# Board RP2040 Zero constains RGB led called NeoPixel. 
+# It actually is microcontroller on itself and you can control it 
 pixels = neopixel.NeoPixel(board.GP16, 1)
 pixels.brightness = 0.01
 
+# Example Function that shows how to use buttons features
+# First it show how to use function layout.write , type some text as keyboard
+# Then it show how to press specific keys on keyboard
 def button_action_1():
     print("I'll perform special Action !")
     pixels.brightness = 0.5
