@@ -8,15 +8,11 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.mouse import Mouse
 import microcontroller
 
-# Piny
-# 29 : lewy górny
-# 4  : prawy górny
-# 8,10,12,14 - strzałki
+
+# This code is very simple to show how it can be done without any knowledge in python programming.
+# code.py does basically the same, but is bit more clean and more "Pythonic"
 
 time.sleep(3)
-
-
-
 
 keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)
