@@ -13,7 +13,7 @@ layout = KeyboardLayoutUS(keyboard)
 buttons = {}
 button_map = (
     #Name of Button, Pin on Board, Action to take, Value of that action
-    ('UpLeft',board.GP28,'function','button_action_1'),
+    ('UpLeft',board.GP28,'keypress',Keycode.HOME),
     ('UpRight',board.GP6,'keypress',Keycode.END),
     ('Left',board.GP14,'keypress',Keycode.LEFT_ARROW),
     ('Right',board.GP8,'keypress',Keycode.RIGHT_ARROW),
@@ -32,6 +32,7 @@ pixels.brightness = 0.01
 # Example Function that shows how to use buttons features
 # First it show how to use function layout.write , type some text as keyboard
 # Then it show how to press specific keys on keyboard
+# Map Example : ('UpLeft',board.GP28,'function','button_action_1'),
 def button_action_1():
     print("I'll perform special Action !")
     pixels.brightness = 0.5

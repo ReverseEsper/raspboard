@@ -6,6 +6,6 @@ button = digitalio.DigitalInOut(board.GP28)
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.DOWN
 
-# If you reset with that button pressed USB drive will show up. Otherwise it won't
+# To access USB disk, press Left Upper button during bootup.
 if not button.value:
 	storage.disable_usb_drive()
